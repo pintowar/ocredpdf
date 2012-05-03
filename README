@@ -1,0 +1,10 @@
+Script ruby para captura e extração de texto em imagens via tesseract e hocr
+
+No ubuntu, executar o seguinte comando para adicionar um novo repositorio:
+"sudo add-apt-repository ppa:alex-p/notesalexp-oneiric"
+
+Em seguida o seguinte comando para instalar as devidas dependencias:
+"sudo apt-get install imagemagick tesseract-ocr tesseract-ocr-por exactimage pdfjam"
+
+Para o uso, basta instalar a gem e em seguida executar
+"ocredpdf <arquivo|diretorio>" 

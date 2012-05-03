@@ -1,0 +1,19 @@
+
+require 'optparse'
+require 'ocredpdf'
+
+OptionParser.new() do |opts|
+    
+    opts.banner = "Usage: ocredpdf [file/path to process]"
+
+    opts.parse!(ARGV)
+end
+
+if ARGV.length == 0
+    $stderr.puts "ocredpdf: no file/path to process"
+else
+    ocr = Ocredpdf::Converter.new ARGV[0]
+    ocr.execute 
+end
+
+
