@@ -4,7 +4,7 @@ require 'ocredpdf'
 
 OptionParser.new() do |opts|
     
-    opts.banner = "Usage: ocredpdf [file/path to process]"
+    opts.banner = "Usage: ocredpdf <source> [target]"
 
     opts.parse!(ARGV)
 end
@@ -12,7 +12,7 @@ end
 if ARGV.length == 0
     $stderr.puts "ocredpdf: no file/path to process"
 else
-    ocr = Ocredpdf::Converter.new ARGV[0]
+    ocr = Ocredpdf::Converter.new ARGV[0], ARGV[1]
     ocr.execute 
 end
 
